@@ -1,0 +1,57 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+  body {
+    @apply font-sans;
+    background-color: #F5F2EE;
+    color: #1A1A1A;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+}
+
+@layer utilities {
+  .selection-art {
+    @apply selection:bg-bronze selection:text-carbon;
+  }
+}
+
+@layer utilities {
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+    .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+}
+
+#lightbox {
+    transition: opacity 0.4s ease-in-out;
+}
+
+#lightbox-img {
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#mobile-menu {
+    transition: opacity 0.3s ease;
+}
+
+.menu-line {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Focus visible para elementos interactivos de la galería */
+[role="button"]:focus-visible {
+    outline: 2px solid #B89B7A;
+    outline-offset: 3px;
+    border-radius: 0.75rem;
+}
+
+#dynamic-title {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}

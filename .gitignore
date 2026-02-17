@@ -1,0 +1,20 @@
+# Dependencias — se reinstalan con "npm install"
+node_modules/
+
+# CSS compilado — Vercel lo genera con "npm run build"
+public/output.css
+
+# macOS
+.DS_Store
+.AppleDouble
+
+# Logs
+npm-debug.log*
+*.log
+
+# Editor / IDE
+.vscode/
+.idea/
+
+# Claude Code
+.claude/

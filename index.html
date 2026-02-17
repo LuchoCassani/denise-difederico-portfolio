@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Denise | Escultora</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Portfolio de Denise, escultora argentina. Escultura contemporánea a través de la talla directa en mármol y tecnologías de fabricación digital 3D. Buenos Aires." />
+    <meta property="og:title" content="Denise | Escultora" />
+    <meta property="og:description" content="Portfolio de Denise, escultora argentina. Escultura contemporánea a través de la talla directa y tecnologías de fabricación digital 3D." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./assets/images/atila.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Denise | Escultora" />
+    <meta name="twitter:description" content="Portfolio de Denise, escultora argentina. Escultura contemporánea y fabricación digital 3D." />
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='80' font-family='Georgia,serif' fill='%231A1A1A'>D</text></svg>" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
+    <link href="./public/output.css" rel="stylesheet" />
+  </head>
+
+  <body class="bg-gallery text-carbon font-sans antialiased">
+
+    <!-- MENÚ MÓVIL (overlay full screen) -->
+    <div
+      id="mobile-menu"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Menú de navegación"
+      aria-hidden="true"
+      class="fixed inset-0 z-40 bg-gallery flex flex-col items-center justify-center gap-10 opacity-0 pointer-events-none"
+    >
+      <nav class="flex flex-col items-center gap-8" aria-label="Navegación móvil">
+        <a href="#obras" class="font-serif text-4xl italic text-carbon hover:text-stone transition-colors">Obras</a>
+        <a href="#proceso" class="font-serif text-4xl italic text-carbon hover:text-stone transition-colors">Proceso</a>
+        <a href="#statement" class="font-serif text-4xl italic text-carbon hover:text-stone transition-colors">Statement</a>
+        <a href="#bio" class="font-serif text-4xl italic text-carbon hover:text-stone transition-colors">Bio</a>
+        <a href="#contacto" class="font-serif text-4xl italic text-carbon hover:text-stone transition-colors">Contacto</a>
+      </nav>
+      <a href="#contacto" class="border border-carbon px-8 py-3 text-[10px] uppercase tracking-widest font-bold hover:bg-carbon hover:text-white transition-all mt-2">
+        Consultas
+      </a>
+    </div>
+
+    <!-- HEADER -->
+    <header class="fixed top-0 left-0 w-full z-50 border-b border-carbon/5 bg-gallery/80 backdrop-blur-md">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+
+        <a href="#home" class="text-xl font-bold tracking-tighter uppercase font-sans">Denise</a>
+
+        <nav class="hidden md:flex items-center gap-12 text-stone uppercase tracking-widest text-[10px] font-bold" aria-label="Navegación principal">
+          <a class="hover:text-carbon transition-colors" href="#obras">Obras</a>
+          <a class="hover:text-carbon transition-colors" href="#proceso">Proceso</a>
+          <a class="hover:text-carbon transition-colors" href="#statement">Statement</a>
+          <a class="hover:text-carbon transition-colors" href="#bio">Bio</a>
+          <a class="hover:text-carbon transition-colors" href="#contacto">Contacto</a>
+        </nav>
+
+        <div class="flex items-center gap-4">
+          <a href="#contacto" class="hidden md:inline-flex border border-carbon px-6 py-2 text-[10px] uppercase tracking-widest font-bold hover:bg-carbon hover:text-white transition-all">
+            Consultas
+          </a>
+          <!-- Botón hamburguesa (solo mobile) -->
+          <button
+            id="menu-btn"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            class="md:hidden flex flex-col justify-center items-center gap-[6px] w-10 h-10"
+          >
+            <span class="menu-line block w-6 h-px bg-carbon origin-center"></span>
+            <span class="menu-line block w-6 h-px bg-carbon origin-center"></span>
+            <span class="menu-line block w-6 h-px bg-carbon origin-center"></span>
+          </button>
+        </div>
+
+      </div>
+    </header>
+
+    <main class="pt-20">
+
+      <!-- HERO -->
+      <section id="home" class="relative min-h-[90vh] flex items-center px-6 lg:px-12">
+        <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class="flex flex-col gap-6">
+            <h2 class="font-serif text-6xl lg:text-8xl leading-none">
+              El Arte de la <br />
+              <span class="italic text-stone font-normal">Forma</span>
+            </h2>
+            <p class="text-stone text-lg max-w-sm font-light leading-relaxed">
+              Explorando el equilibrio entre la materia y el vacío a través de la escultura contemporánea.
+            </p>
+            <div class="pt-4">
+              <a href="#obras" class="inline-flex items-center gap-3 bg-carbon text-white px-8 py-4 text-sm font-bold hover:bg-stone transition-colors">
+                Ver Portfolio
+                <span class="material-symbols-outlined text-sm" aria-hidden="true">arrow_downward</span>
+              </a>
+            </div>
+          </div>
+          <div class="relative aspect-[4/5] w-full max-w-md mx-auto lg:max-w-full rounded-2xl overflow-hidden shadow-2xl bg-cement">
+            <img src="./assets/images/atila.jpg" alt="Escultura principal de Denise" class="w-full h-full object-cover" />
+            <div class="absolute bottom-8 left-8 text-white">
+              <p class="text-[10px] uppercase tracking-[0.2em] font-bold opacity-80 mb-1">Obra Reciente</p>
+              <p class="font-serif text-2xl">Silencio Etéreo No. 1</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GALERÍA -->
+      <section id="obras" class="py-20 bg-white selection-art">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 mb-14">
+          <span class="text-stone font-bold text-[10px] tracking-[0.3em] uppercase mb-4 block">Selected Works</span>
+          <h2 class="font-serif text-4xl lg:text-5xl">Obras</h2>
+        </div>
+        <!-- Cards generadas dinámicamente desde js/obras.js -->
+        <div id="gallery-grid" class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16 pb-10">
+        </div>
+      </section>
+
+      <!-- PROCESO / TECNOLOGÍA 3D -->
+      <section id="proceso" class="bg-carbon text-white py-24 lg:py-40 px-6 lg:px-12">
+        <div class="max-w-7xl mx-auto">
+
+          <div class="max-w-3xl mb-20">
+            <span class="text-bronze font-bold text-[10px] tracking-[0.4em] uppercase mb-6 block">Proceso de Trabajo</span>
+            <h2 class="font-serif text-4xl lg:text-6xl leading-tight mb-8">
+              Donde la piedra <br />
+              <span class="italic text-stone">dialoga con el pixel.</span>
+            </h2>
+            <p class="text-stone text-lg font-light leading-relaxed">
+              Mi práctica integra herramientas de fabricación digital con las técnicas más antiguas de la escultura. El modelado 3D y la impresión me permiten explorar proporciones y formas antes de encontrarme con el material definitivo — la piedra, el mármol, la arcilla.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/10">
+
+            <div class="bg-carbon p-10 lg:p-14">
+              <span class="text-bronze font-bold text-[10px] tracking-[0.4em] uppercase block mb-8">01</span>
+              <span class="material-symbols-outlined text-3xl text-stone mb-6 block" aria-hidden="true">deployed_code</span>
+              <h3 class="font-serif text-2xl mb-5">Modelado Digital</h3>
+              <p class="text-stone text-sm font-light leading-relaxed">
+                La exploración formal comienza en el espacio virtual. Mediante software de modelado 3D y escaneo de referencias, desarrollo la geometría de la pieza con total libertad antes de comprometerse con el material.
+              </p>
+            </div>
+
+            <div class="bg-carbon p-10 lg:p-14">
+              <span class="text-bronze font-bold text-[10px] tracking-[0.4em] uppercase block mb-8">02</span>
+              <span class="material-symbols-outlined text-3xl text-stone mb-6 block" aria-hidden="true">print</span>
+              <h3 class="font-serif text-2xl mb-5">Prototipado 3D</h3>
+              <p class="text-stone text-sm font-light leading-relaxed">
+                La impresión 3D materializa la idea en escala. Estos prototipos son herramientas de estudio: permiten analizar volumen, peso visual y la relación de la pieza con el espacio antes del tallado definitivo.
+              </p>
+            </div>
+
+            <div class="bg-carbon p-10 lg:p-14">
+              <span class="text-bronze font-bold text-[10px] tracking-[0.4em] uppercase block mb-8">03</span>
+              <span class="material-symbols-outlined text-3xl text-stone mb-6 block" aria-hidden="true">diamond</span>
+              <h3 class="font-serif text-2xl mb-5">Materialización</h3>
+              <p class="text-stone text-sm font-light leading-relaxed">
+                El material definitivo — mármol, piedra, resina — transforma la precisión digital en algo vivo. El proceso de talla incorpora las particularidades únicas de cada bloque, convirtiendo el diseño en obra singular.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ARTIST STATEMENT -->
+      <section id="statement" class="py-24 lg:py-40 bg-gallery selection-art">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+          <!-- Cita principal -->
+          <div class="max-w-4xl mx-auto text-center mb-32 lg:mb-48">
+            <span class="text-stone font-bold text-[10px] tracking-[0.4em] uppercase mb-10 block">Artist Statement</span>
+            <blockquote class="font-serif text-4xl lg:text-6xl leading-tight text-carbon italic mb-12">
+              "Esculpir no es dar forma a la piedra,<br class="hidden lg:block" /> es liberar la quietud que habita en ella."
+            </blockquote>
+            <p class="text-stone text-lg lg:text-xl font-light leading-relaxed max-w-2xl mx-auto">
+              Mi práctica se centra en la fenomenología del material. A través de la talla directa en mármol, exploro la tensión entre la dureza mineral y la fragilidad de la forma orgánica.
+            </p>
+          </div>
+
+          <!-- Bio + CV -->
+          <div id="bio" class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start pt-16 border-t border-carbon/5">
+
+            <div class="lg:col-span-5">
+              <div class="relative w-full aspect-[3/4] overflow-hidden rounded-xl shadow-2xl bg-cement">
+                <img loading="lazy" src="./assets/images/denise.jpg" alt="Retrato de Denise en su taller" class="w-full h-full object-cover" />
+              </div>
+              <div class="mt-8">
+                <h3 class="font-sans font-bold text-3xl uppercase tracking-tighter text-carbon">Denise</h3>
+                <p class="text-stone text-sm italic font-light mt-1">Sculptor, b. Buenos Aires, Argentina</p>
+              </div>
+            </div>
+
+            <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-12 pt-2">
+
+              <div>
+                <h4 class="text-stone font-bold text-[10px] tracking-widest uppercase mb-6 pb-2 border-b border-carbon/10">Education</h4>
+                <ul class="space-y-6">
+                  <li>
+                    <p class="font-bold text-xs uppercase tracking-tight text-carbon">Escuela Superior de Bellas Artes</p>
+                    <p class="text-[11px] text-stone mt-1">Licenciatura en Artes Visuales, 2016</p>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="flex flex-col gap-12">
+                <div>
+                  <h4 class="text-stone font-bold text-[10px] tracking-widest uppercase mb-6 pb-2 border-b border-carbon/10">Key Exhibitions</h4>
+                  <ul class="space-y-6">
+                    <li class="flex gap-4">
+                      <span class="text-[10px] font-bold text-stone/40 pt-0.5">2025</span>
+                      <div>
+                        <p class="text-xs font-bold uppercase tracking-tight text-carbon">Bienal de Arte Joven</p>
+                        <p class="text-[11px] text-stone mt-1">Centro Cultural Recoleta, CABA</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 class="text-stone font-bold text-[10px] tracking-widest uppercase mb-6 pb-2 border-b border-carbon/10">Awards</h4>
+                  <ul class="space-y-6">
+                    <li class="flex items-start gap-3">
+                      <span class="material-symbols-outlined text-sm text-bronze mt-0.5" aria-hidden="true">workspace_premium</span>
+                      <div>
+                        <p class="text-xs font-bold uppercase tracking-tight text-carbon">Primer Premio Escultura</p>
+                        <p class="text-[11px] text-stone mt-1">Salón Nacional de Artes Visuales, 2023</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACTO -->
+      <footer id="contacto" class="bg-white py-24 lg:py-32 px-6 lg:px-12 border-t border-carbon/5">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20">
+
+          <!-- Info personal -->
+          <div class="flex flex-col gap-8">
+            <div>
+              <span class="text-stone font-bold text-[10px] tracking-[0.4em] uppercase mb-4 block">Contacto</span>
+              <h2 class="font-serif text-4xl lg:text-5xl leading-tight">
+                Hablemos<br />
+                <span class="italic text-stone font-normal">de Arte.</span>
+              </h2>
+            </div>
+            <p class="text-stone text-lg font-light leading-relaxed max-w-sm">
+              ¿Interesada/o en una obra, una colaboración o una exposición? Estoy disponible para consultas de coleccionistas, galerías e instituciones culturales.
+            </p>
+            <div class="flex flex-col gap-4 pt-2">
+              <a href="mailto:denisedifederico@gmail.com" class="flex items-center gap-3 text-carbon hover:text-stone transition-colors group">
+                <span class="material-symbols-outlined text-lg text-bronze" aria-hidden="true">mail</span>
+                <span class="text-sm font-light">denisedifederico@gmail.com</span>
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-carbon hover:text-stone transition-colors">
+                <span class="material-symbols-outlined text-lg text-bronze" aria-hidden="true">photo_camera</span>
+                <span class="text-sm font-light">@denise.escultora</span>
+              </a>
+              <p class="flex items-center gap-3 text-stone">
+                <span class="material-symbols-outlined text-lg text-bronze" aria-hidden="true">location_on</span>
+                <span class="text-sm font-light">Buenos Aires, Argentina</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Formulario Web3Forms (gratuito) -->
+          <!-- PASO ÚNICO: ir a web3forms.com, ingresar denisedifederico@gmail.com y reemplazar TU_ACCESS_KEY -->
+          <div>
+            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="flex flex-col gap-6" novalidate>
+              <!-- Campos ocultos de Web3Forms -->
+              <input type="hidden" name="access_key" value="TU_ACCESS_KEY" />
+              <input type="hidden" name="subject" value="Nueva consulta desde el portfolio — Denise" />
+              <input type="hidden" name="from_name" value="Portfolio Denise" />
+              <input type="checkbox" name="botcheck" class="hidden" style="display:none" />
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <input id="name" name="name" type="text" placeholder="Tu nombre" autocomplete="name" class="bg-gallery border-none rounded-lg px-4 py-4 outline-none focus:ring-1 focus:ring-stone" required />
+                <input id="email" name="email" type="email" placeholder="Email" autocomplete="email" class="bg-gallery border-none rounded-lg px-4 py-4 outline-none focus:ring-1 focus:ring-stone" required />
+              </div>
+              <textarea id="message" name="message" rows="5" placeholder="Mensaje" class="bg-gallery border-none rounded-lg px-4 py-4 outline-none focus:ring-1 focus:ring-stone resize-none" required></textarea>
+              <button id="submit-btn" type="submit" disabled class="bg-carbon/50 cursor-not-allowed text-white py-5 rounded-lg font-bold text-[10px] uppercase tracking-[0.3em] transition-all">
+                Enviar Mensaje
+              </button>
+              <div id="form-success" class="hidden text-center py-4">
+                <span class="material-symbols-outlined text-2xl text-bronze block mb-2" aria-hidden="true">check_circle</span>
+                <p class="font-serif text-lg italic text-carbon">Mensaje enviado. Me pondré en contacto pronto.</p>
+              </div>
+              <div id="form-error" class="hidden text-center py-3">
+                <p class="text-sm text-red-600">Hubo un error al enviar. Por favor, intentá de nuevo.</p>
+              </div>
+            </form>
+          </div>
+
+        </div>
+
+        <!-- Footer bottom -->
+        <div class="max-w-7xl mx-auto mt-20 pt-8 border-t border-carbon/5 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p class="text-stone text-[11px] font-light">© 2025 Denise. Todos los derechos reservados.</p>
+          <p class="text-stone text-[11px] font-light">Buenos Aires, Argentina</p>
+        </div>
+      </footer>
+
+    </main>
+
+    <script src="./js/obras.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
