@@ -48,7 +48,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (galeriaEl && obra.imagenes.length > 1) {
         seccionGaleria.classList.remove('hidden');
 
-        obra.imagenes.forEach((imgSrc, i) => {
+        obra.imagenes.forEach((imgItem, i) => {
+            const imgSrc      = typeof imgItem === 'string' ? imgItem : imgItem.src;
+            const imgPosicion = typeof imgItem === 'string' ? 'center' : (imgItem.posicion || 'center');
+
             const item = document.createElement('div');
             item.className = 'aspect-square overflow-hidden rounded-xl bg-cement cursor-pointer group relative';
             item.setAttribute('role', 'button');
@@ -60,6 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     src="${imgSrc}"
                     alt="${obra.titulo} — imagen ${i + 1}"
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    style="object-position: ${imgPosicion}"
                 />
                 <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <span class="material-symbols-outlined text-white text-4xl drop-shadow-lg" aria-hidden="true">zoom_in</span>
