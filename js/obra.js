@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const imgEl = document.getElementById('obra-imagen-principal');
     imgEl.src = obra.imagenPrincipal;
     imgEl.alt = `${obra.titulo} — ${obra.material}`;
+    imgEl.style.objectPosition = obra.imagenPosicion || 'center';
 
     document.getElementById('obra-titulo').textContent      = obra.titulo;
     document.getElementById('obra-material').textContent    = obra.material;

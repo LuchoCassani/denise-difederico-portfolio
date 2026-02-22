@@ -66,6 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         src="${obra.imagenPrincipal}"
                         alt="${obra.titulo} — ${obra.material}"
                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        style="object-position: ${obra.imagenPosicion || 'center'}"
                     />
                 </div>
                 <div class="flex justify-between items-start">
