@@ -35,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
     imgEl.alt = `${obra.titulo} — ${obra.material}`;
 
     document.getElementById('obra-titulo').textContent      = obra.titulo;
-    document.getElementById('obra-coleccion').textContent   = `Colección ${obra.coleccion}`;
     document.getElementById('obra-material').textContent    = obra.material;
     document.getElementById('obra-año').textContent         = obra.año;
     document.getElementById('obra-dimensiones').textContent = obra.dimensiones;

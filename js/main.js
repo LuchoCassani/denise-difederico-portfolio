@@ -67,11 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         alt="${obra.titulo} — ${obra.material}"
                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     />
-                    <div class="absolute top-4 left-4">
-                        <span class="text-[9px] uppercase tracking-widest font-bold bg-white/80 backdrop-blur-sm text-carbon px-3 py-1.5 rounded-full">
-                            ${obra.coleccion}
-                        </span>
-                    </div>
                 </div>
                 <div class="flex justify-between items-start">
                     <div>
@@ -104,9 +99,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 validateEmail(emailInput.value);
 
             submitBtn.disabled = !valid;
-            submitBtn.classList.toggle('bg-carbon',          valid);
-            submitBtn.classList.toggle('bg-carbon/50',       !valid);
-            submitBtn.classList.toggle('cursor-pointer',     valid);
+            submitBtn.classList.toggle('bg-carbon', valid);
+            submitBtn.classList.toggle('bg-carbon/50', !valid);
+            submitBtn.classList.toggle('cursor-pointer', valid);
             submitBtn.classList.toggle('cursor-not-allowed', !valid);
         };
 
