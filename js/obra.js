@@ -39,7 +39,11 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('obra-material').textContent    = obra.material;
     document.getElementById('obra-año').textContent         = obra.año;
     document.getElementById('obra-dimensiones').textContent = obra.dimensiones;
-    document.getElementById('obra-descripcion').textContent = obra.descripcion;
+    const descEl = document.getElementById('obra-descripcion');
+    descEl.innerHTML = obra.descripcion
+      .split('\n\n')
+      .map(p => `<p>${p.trim()}</p>`)
+      .join('');
 
     // ─── FOTOS ADICIONALES ──────────────────────────────────────────────────────
     const galeriaEl       = document.getElementById('obra-galeria');
