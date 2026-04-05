@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             `;
 
-            const activate = () => openLightbox(imgSrc, `${obra.titulo} — imagen ${i + 1}`);
+            const activate = () => openLightbox(i);
             item.addEventListener('click', activate);
             item.addEventListener('keydown', (e) => {
                 if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activate(); }
@@ -152,15 +152,31 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ─── LIGHTBOX ───────────────────────────────────────────────────────────────
-    const lightbox     = document.getElementById('lightbox');
-    const lightboxImg  = document.getElementById('lightbox-img');
+    const lightbox         = document.getElementById('lightbox');
+    const lightboxImg      = document.getElementById('lightbox-img');
     const closeLightboxBtn = document.getElementById('close-lightbox');
-    let previouslyFocused = null;
+    const prevBtn          = document.getElementById('lightbox-prev');
+    const nextBtn          = document.getElementById('lightbox-next');
+    let previouslyFocused  = null;
+    let currentIndex       = 0;
 
-    window.openLightbox = (imgSrc, altText) => {
+    const imagenes = obra.imagenes;
+
+    const updateLightboxImage = (index) => {
+        currentIndex = index;
+        const imgItem     = imagenes[index];
+        const imgSrc      = typeof imgItem === 'string' ? imgItem : imgItem.src;
+        const imgPosicion = typeof imgItem === 'string' ? 'center' : (imgItem.posicion || 'center');
+        lightboxImg.src   = imgSrc;
+        lightboxImg.alt   = `${obra.titulo} — imagen ${index + 1}`;
+        lightboxImg.style.objectPosition = imgPosicion;
+        if (prevBtn) prevBtn.disabled = index === 0;
+        if (nextBtn) nextBtn.disabled = index === imagenes.length - 1;
+    };
+
+    window.openLightbox = (index) => {
         previouslyFocused = document.activeElement;
-        lightboxImg.src = imgSrc;
-        lightboxImg.alt = altText || '';
+        updateLightboxImage(index);
 
         lightbox.classList.remove('hidden');
         lightbox.classList.add('opacity-0');
@@ -184,10 +200,16 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = '';
     };
 
+    if (prevBtn) prevBtn.addEventListener('click', () => { if (currentIndex > 0) updateLightboxImage(currentIndex - 1); });
+    if (nextBtn) nextBtn.addEventListener('click', () => { if (currentIndex < imagenes.length - 1) updateLightboxImage(currentIndex + 1); });
+
     if (closeLightboxBtn) closeLightboxBtn.addEventListener('click', closeLightbox);
     lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) closeLightbox();
+        if (lightbox.classList.contains('hidden')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft'  && currentIndex > 0) updateLightboxImage(currentIndex - 1);
+        if (e.key === 'ArrowRight' && currentIndex < imagenes.length - 1) updateLightboxImage(currentIndex + 1);
     });
 
 });
